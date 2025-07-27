@@ -1,17 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>梆梆的测试页面</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>梆梆的博客</title>
+  <style>
+    :root {
+      --main-bg: #f9fafb;
+      --accent: #2d88ff;
+      --text: #23272f;
+      --muted: #5a5f6a;
+      --card-bg: #fff;
+      --radius: 16px;
+      --shadow: 0 4px 24px 0 rgba(45,136,255,0.08);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'SF Pro SC','Helvetica Neue','Arial','sans-serif';
+      background: var(--main-bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 2.5rem 0 1.2rem 0;
+      text-align: center;
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.5em 0 0 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    main {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.2rem 4rem 1.2rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .post-card {
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      padding: 2rem;
+      transition: transform 0.16s;
+      cursor: pointer;
+      border-left: 6px solid var(--accent);
+    }
+    .post-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 8px 32px 0 rgba(45,136,255,0.12);
+    }
+    .post-title {
+      margin: 0 0 0.6rem 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .post-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.7rem;
+    }
+    .post-desc {
+      margin: 0;
+      color: var(--text);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 0 1.2rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      main { padding: 1.5rem 0.4rem 2rem 0.4rem; }
+      .post-card { padding: 1.2rem; }
+    }
+  </style>
 </head>
- 
 <body>
- <h>
-  猜猜这是什么东西
- </h>
- <p>
-  忘记这个是啥了。
- </p>
+  <header>
+    <h1>梆梆的博客</h1>
+    <p>记录思考，分享新知，保持好奇。</p>
+  </header>
+  <main>
+    <div class="post-card">
+      <div class="post-title">如何搭建个人博客？</div>
+      <div class="post-meta">2025-07-27 · 前端开发</div>
+      <div class="post-desc">本文介绍了从零开始搭建博客的流程，包括选型、部署与样式定制，让每个人都能拥有属于自己的独特空间。</div>
+    </div>
+    <div class="post-card">
+      <div class="post-title">我喜欢的极简网页设计</div>
+      <div class="post-meta">2025-07-25 · 设计分享</div>
+      <div class="post-desc">极简风格不仅仅是少，更是留白与聚焦。本文分享了我在网页设计中的极简实践和灵感来源。</div>
+    </div>
+    <div class="post-card">
+      <div class="post-title">前端那些新奇好玩的技术</div>
+      <div class="post-meta">2025-07-18 · 技术随笔</div>
+      <div class="post-desc">探索Web动画、CSS变量、渐变、响应式和前端新API，发现让网页焕然一新的可能性。</div>
+    </div>
+    <!-- 你可以在这里继续添加更多文章卡片 -->
+  </main>
+  <footer>
+    &copy; 2025 梆梆 | 用代码记录生活
+  </footer>
 </body>
- 
 </html>
